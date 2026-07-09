@@ -1,0 +1,269 @@
+          2014
+Amazon 3
+Archangel 5
+Bearman 3
+Bounty Hunter 3
+Brownie Magician 4
+Cow Girl 3
+Chimera 5
+Drunken Master 3
+Dragon 5
+Dragon Knight 5
+Elemental 3
+Epikion Priest 3
+Fairy 3
+Fairy Queen 3
+Griffon 3
+Garuda 2
+Golem 3
+Grim Reaper 3
+Harpu 2
+Harpy 3
+Howl 2
+Hellhound 2
+High Elemental 3
+Hell Lady 5
+Inugami 3
+Imp 2
+Imp Champion 3
+Inferno 3
+Ifrit 5
+Joker 4
+Kobold Bomber 4
+Kung Fu Girl 4
+Lich 4
+Living Armor 3
+Lizardman 3
+Low Elemental 2
+Magical Archer 3
+Magical Archer Light 3
+Martial Cat 3
+Minotauros 3
+Monkey King 4
+Mystic Witch 3
+Ninja 4
+Nine-tailed Fox 4
+Oracle 5
+Occult Girl 5
+Phoenix 5
+Phantom Thief 4
+Pioneer 5
+Pixie 2
+Pierret 4
+Rakshasa 4
+Succubus 4
+Salamander 3
+Samurai 3
+Serpent 3
+Sky Dancer 4
+Sylph 4
+Sylphid 4
+Taoist 3
+Undine 4
+Unicorn 5
+Valkyrja 5
+Vampire 4
+Vagabond 3
+Viking 3
+Warbear 3
+Werewolf 3
+Yeti 2
+
+          2015
+Neostone Agent 4
+Neostone Fighter 4
+Assassin 4
+Martial Artist 3
+Paladin 5
+Elven Ranger 3
+Fairy Queen 5
+Frankenstein 3
+Jack-o’-lantern 4
+
+          2015 Северный пак
+Penguin Knight 3
+Battle Mammoth 3
+Barbaric King 4
+Polar Queen 5
+
+          2016
+Death Knight 4
+Dice Magician 4
+Harp Magician 4
+Fairy King 5
+Harg 3
+Magic Knight 4
+Panda Warrior 5
+
+          2016 Морской пак
+Charger Shark 3
+Pirate Captain 4
+Mermaid 4
+Sea Emperor 5
+
+          2017
+Giant Warrior 3
+Homunculus 5
+
+          2017 Египетский пак
+Anubis 4
+Horus 4
+Desert Queen 5
+Mummy 3
+
+          2018 Близнецы
+Chakram Dancer 4
+Boomerang Warrior 4
+Arcane Weapon 5
+Lightning Emperor 5
+Centaur Knight 4
+Beetle Guardian 5
+
+          2019
+Cannon Girl 4
+Sniper Mk.I 4
+Demon 5
+Gargoyle 4
+Striker 5
+Vampire Lord 5
+Duke 5
+Beast Hunter 3
+Beast Monk 5
+Beast Rider 5
+Mage 5
+
+          2020
+Art Master 5
+String Master 4
+Poison Master 4
+
+             2020 Street Fighter V
+RYU 5
+CHUN LI 5
+KEN 5
+M.BISON 5
+DHALSIM 5
+
+             2021
+Druid 5
+Dryad 4
+Totemist 5
+
+             2022
+Battle Angel 5
+Blade Dancer 4
+Devil Maiden 5
+Hypnomeow 4
+Shadowcaster 5
+ROBO 4
+Sky Surfer 5
+
+             2022 Cookie Run: Kingdom
+GingerBrave 5
+Pure Vanilla Cookie 5
+Madeleine Cookie 4
+Espresso Cookie 4
+Hollyberry Cookie 5
+Black Tea Bunny 4
+Pudding Princess 5
+Choco Knight 4
+Lollipop Warrior 5
+Macaron Guard 5
+
+             2023
+Daimon 5
+Desert Warrior 5
+Gladiatrix 5
+Mercenary Queen 5
+Steel Commander 5
+Twin Angels 5
+Magic Order Elementalist 5
+Magic Order Enchantress 5
+Magic Order Guardian 5
+Magic Order Swordsinger 5
+
+             2023 Assassin's Creed
+Altaïr 5
+Ezio 5
+Kassandra 5
+Eivor 5
+Bayek 5
+
+             2024
+Onimusha 4
+Onmyouji 5
+Puppeteer 5
+Cyborg 4
+Hacker 5
+Asura 4
+Indra 5
+Dokkaebi Lord 5
+Dokkaebi Princess and Sapsaree 4
+Drakan Warrior 5
+Dual Blade 5
+Rune Blacksmith 4
+Shadow Claw 5
+Shasha 5
+Specter Princess 5
+Tomb Warden 4
+Weapon Master 5
+
+             2024 The Witcher 3: Wild Hunt
+Geralt 5
+Ciri 5
+Yennefer 5
+Triss 5
+
+             2024 Jujutsu Kaisen
+Yuji Itadori 4
+Megumi Fushiguro 4
+Nobara Kugisaki 4
+Satoru Gojo 4
+Ryomen Sukuna 5
+Exorcist Association Arbiter 5
+Exorcist Association Conjurer 4
+Exorcist Association Fighter 4
+Exorcist Association Hunter 4
+Exorcist Association Resolver 4
+
+             2025
+Justice 4
+Kai 4
+
+             2025 Tekken 8
+Jin Kazama 4
+Paul Phoenix 4
+Nina Williams 4
+Hwoarang 4
+Heihachi Mishima 5
+
+             2025 Demon Slayer
+Azure Dragon Swordsman 4
+Vermilion Bird Dancer 4
+White Tiger Blade Master 4
+Slayer 5
+Qilin Slasher 4
+Black Tortoise Champion 5
+Tanjiro Kamado 4
+Nezuko Kamado 4
+Zenitsu Agatsuma 4
+Inosuke Hashibira 5
+Gyomei Himejima 5
+
+             2026 The King of Fighters '98
+Taebeak 5
+Dr. Plazma 5
+
+             2026 Lord of the Rings
+Frodo 4
+Aragorn 4
+Legolas 4
+Gandalf 4
+Gollum 4
+
+             2026 Frieren
+Himmel 4
+Frieren 4
+Fern 4
+Stark 4
+Ubel 4

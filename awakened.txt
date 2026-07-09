@@ -1,0 +1,736 @@
+# awakened.txt - ПРОБУЖДЕННЫЕ ИМЕНА МОНСТРОВ
+# Формат: Семейство|Стихия|Пробужденное имя
+# Стихии: water, fire, wind, light, dark
+
+# === 2★ МОНСТРЫ ===
+Low Elemental|water|Tigresse
+Low Elemental|fire|Lamor
+Low Elemental|wind|Samour
+
+Imp|water|Fynn
+Imp|fire|Cogma
+Imp|wind|Ralph
+Imp|light|Taru
+Imp|dark|Garok
+
+Pixie|water|Kacey
+Pixie|fire|Tatu
+Pixie|wind|Shannon
+Pixie|light|Cheryl
+Pixie|dark|Camaryn
+
+Yeti|water|Kunda
+Yeti|fire|Tantra
+Yeti|wind|Rakaja
+Yeti|light|Arkajan
+Yeti|dark|Kumae
+
+Hellhound|water|Tarq
+Hellhound|fire|Sieq
+Hellhound|wind|Gamir
+Hellhound|light|Shamar
+Hellhound|dark|Shumar
+
+Salamander|water|Kaimann
+Salamander|fire|Krakdon
+Salamander|wind|Lukan
+Salamander|light|Sharman
+Salamander|dark|Decamaron
+
+Howl|water|Lulu
+Howl|fire|Lala
+Howl|wind|Chichi
+Howl|light|Shushu
+Howl|dark|Chacha
+
+Viking|water|Huga
+Viking|fire|Geoffrey
+Viking|wind|Walter
+Viking|light|Jansson
+Viking|dark|Janssen
+
+Garuda|water|Konamiya
+Garuda|fire|Cahule
+Garuda|wind|Lindermen
+Garuda|light|Teon
+Garuda|dark|Rizak
+
+# === 3★ МОНСТРЫ ===
+Fairy|water|Elucia
+Fairy|fire|Iselia
+Fairy|wind|Aeilene
+Fairy|light|Neal
+Fairy|dark|Sorin
+
+Harpy|water|Ramira
+Harpy|fire|Lucasha
+Harpy|wind|Prilea
+Harpy|light|Kabilla
+Harpy|dark|Hellea
+
+Warbear|water|Dagora
+Warbear|fire|Ursha
+Warbear|wind|Ramagos
+Warbear|light|Lusha
+Warbear|dark|Gorgo
+
+Elemental|water|Daharenos
+Elemental|fire|Bremis
+Elemental|wind|Taharus
+Elemental|light|Priz
+Elemental|dark|Camules
+
+Inugami|water|Raoq
+Inugami|fire|Icaru
+Inugami|wind|Ramahan
+Inugami|light|Belladeon
+Inugami|dark|Kro
+
+Serpent|water|Shailoq
+Serpent|fire|Fao
+Serpent|wind|Ermeda
+Serpent|light|Elpuria
+Serpent|dark|Mantura
+
+Golem|water|Kuhn
+Golem|fire|Kugo
+Golem|wind|Ragion
+Golem|light|Groggo
+Golem|dark|Maggi
+
+Griffon|water|Kahn
+Griffon|fire|Spectra
+Griffon|wind|Bernard
+Griffon|light|Shamann
+Griffon|dark|Varus
+
+Inferno|water|Purian
+Inferno|fire|Tagaros
+Inferno|wind|Anduril
+Inferno|light|Eludain
+Inferno|dark|Drogan
+
+High Elemental|water|Ellena
+High Elemental|fire|Kahli
+High Elemental|wind|Moria
+High Elemental|light|Shren
+High Elemental|dark|Jumaline
+
+Harpu|water|Sisroo
+Harpu|fire|Colleen
+Harpu|wind|Seal
+Harpu|light|Sia
+Harpu|dark|Seren
+
+Bearman|water|Gruda
+Bearman|fire|Kungen
+Bearman|wind|Dagorr
+Bearman|light|Ahman
+Bearman|dark|Haken
+
+Werewolf|water|Vigor
+Werewolf|fire|Garoche
+Werewolf|wind|Shakan
+Werewolf|light|Eshir
+Werewolf|dark|Jultan
+
+Amazon|water|Ellin
+Amazon|fire|Ceres
+Amazon|wind|Hina
+Amazon|light|Lyn
+Amazon|dark|Mara
+
+Martial Cat|water|Mina
+Martial Cat|fire|Mei
+Martial Cat|wind|Naomi
+Martial Cat|light|Xiao Ling
+Martial Cat|dark|Miho
+
+Vagabond|water|Allen
+Vagabond|fire|Kai'en
+Vagabond|wind|Roid
+Vagabond|light|Darion
+Vagabond|dark|Jubelle
+
+Bounty Hunter|water|Wayne
+Bounty Hunter|fire|Randy
+Bounty Hunter|wind|Roger
+Bounty Hunter|light|Walkers
+Bounty Hunter|dark|Jamie
+
+Imp Champion|water|Yaku
+Imp Champion|fire|Fairo
+Imp Champion|wind|Pigma
+Imp Champion|light|Shaffron
+Imp Champion|dark|Loque
+
+Mystic Witch|water|Megan
+Mystic Witch|fire|Rebecca
+Mystic Witch|wind|Silia
+Mystic Witch|light|Linda
+Mystic Witch|dark|Gina
+
+Grim Reaper|water|Hemos
+Grim Reaper|fire|Sath
+Grim Reaper|wind|Hiva
+Grim Reaper|light|Prom
+Grim Reaper|dark|Thrain
+
+Living Armor|water|Nickel
+Living Armor|fire|Iron
+Living Armor|wind|Copper
+Living Armor|light|Silver
+Living Armor|dark|Zinc
+
+Drunken Master|water|Mao
+Drunken Master|fire|Xiao Chun
+Drunken Master|wind|Huan
+Drunken Master|light|Tien Qin
+Drunken Master|dark|Wei Shin
+
+Minotauros|water|Urtau
+Minotauros|fire|Burentau
+Minotauros|wind|Eintau
+Minotauros|light|Grotau
+Minotauros|dark|Kamatau
+
+Lizardman|water|Kernodon
+Lizardman|fire|Igmanodon
+Lizardman|wind|Velfinodon
+Lizardman|light|Glinodon
+Lizardman|dark|Devinodon
+
+Beast Hunter|water|Gangchun
+Beast Hunter|fire|Nangrim
+Beast Hunter|wind|Suri
+Beast Hunter|light|Baekdu
+Beast Hunter|dark|Hannam
+
+Penguin Knight|water|Toma
+Penguin Knight|fire|Naki
+Penguin Knight|wind|Mav
+Penguin Knight|light|Dona
+Penguin Knight|dark|Kuna
+
+Battle Mammoth|water|Talc
+Battle Mammoth|fire|Granite
+Battle Mammoth|wind|Olivine
+Battle Mammoth|light|Marble
+Battle Mammoth|dark|Basalt
+
+Cow Girl|water|Sera
+Cow Girl|fire|Anne
+Cow Girl|wind|Hannah
+Cow Girl|light|Loren
+Cow Girl|dark|Cassie
+
+Charger Shark|water|Aqcus
+Charger Shark|fire|Ignicus
+Charger Shark|wind|Zephicus
+Charger Shark|light|Rumicus
+Charger Shark|dark|Calicus
+
+Martial Artist|water|Luan
+Martial Artist|fire|Sin
+Martial Artist|wind|Lo
+Martial Artist|light|Hiro
+Martial Artist|dark|Jackie
+
+Mummy|water|Nubia
+Mummy|fire|Sonora
+Mummy|wind|Namib
+Mummy|light|Sahara
+Mummy|dark|Karakum
+
+Frankenstein|water|Tractor
+Frankenstein|fire|Bulldozer
+Frankenstein|wind|Crane
+Frankenstein|light|Driller
+Frankenstein|dark|Crawler
+
+Elven Ranger|water|Eluin
+Elven Ranger|fire|Adrian
+Elven Ranger|wind|Erwin
+Elven Ranger|light|Lucien
+Elven Ranger|dark|Isillen
+
+Harg|water|Remy
+Harg|fire|Racuni
+Harg|wind|Raviti
+Harg|light|Dova
+Harg|dark|Kroa
+
+# === 4★ МОНСТРЫ ===
+Nine-tailed Fox|water|Soha
+Nine-tailed Fox|fire|Shihwa
+Nine-tailed Fox|wind|Arang
+Nine-tailed Fox|light|Chamie
+Nine-tailed Fox|dark|Kamiya
+
+Undine|water|Mikene
+Undine|fire|Atenai
+Undine|wind|Delphoi
+Undine|light|Icasha
+Undine|dark|Tilasha
+
+Sylph|water|Tyron
+Sylph|fire|Baretta
+Sylph|wind|Shimitae
+Sylph|light|Eredas
+Sylph|dark|Aschubel
+
+Sylphid|water|Lumirecia
+Sylphid|fire|Fria
+Sylphid|wind|Acasis
+Sylphid|light|Mihael
+Sylphid|dark|Icares
+
+Succubus|water|Izaria
+Succubus|fire|Akia
+Succubus|wind|Selena
+Succubus|light|Aria
+Succubus|dark|Isael
+
+Joker|water|Sian
+Joker|fire|Jojo
+Joker|wind|Lushen
+Joker|light|Figaro
+Joker|dark|Liebli
+
+Ninja|water|Susano
+Ninja|fire|Garo
+Ninja|wind|Orochi
+Ninja|light|Gin
+Ninja|dark|Han
+
+Pierret|water|Julie
+Pierret|fire|Clara
+Pierret|wind|Sophia
+Pierret|light|Eva
+Pierret|dark|Luna
+
+Phantom Thief|water|Luer
+Phantom Thief|fire|Jean
+Phantom Thief|wind|Julien
+Phantom Thief|light|Louis
+Phantom Thief|dark|Guillaume
+
+Epikion Priest|water|Rina
+Epikion Priest|fire|Chloe
+Epikion Priest|wind|Michelle
+Epikion Priest|light|Iona
+Epikion Priest|dark|Rasheed
+
+Magical Archer|water|Sharron
+Magical Archer|fire|Cassandra
+Magical Archer|wind|Ardella
+Magical Archer|light|Chris
+Magical Archer|dark|Bethony
+
+Rakshasa|water|Su
+Rakshasa|fire|Hwa
+Rakshasa|wind|Yen
+Rakshasa|light|Pang
+Rakshasa|dark|Ran
+
+Death Knight|water|Fedora
+Death Knight|fire|Arnold
+Death Knight|wind|Briand
+Death Knight|light|Conrad
+Death Knight|dark|Dias
+
+Lich|water|Rigel
+Lich|fire|Antares
+Lich|wind|Fuco
+Lich|light|Halphas
+Lich|dark|Grego
+
+Samurai|water|Kaz
+Samurai|fire|Jun
+Samurai|wind|Kaito
+Samurai|light|Tosi
+Samurai|dark|Sige
+
+Kung Fu Girl|water|Xiao Lin
+Kung Fu Girl|fire|Hong Hua
+Kung Fu Girl|wind|Ling Ling
+Kung Fu Girl|light|Liu Mei
+Kung Fu Girl|dark|Fei
+
+Brownie Magician|water|Orion
+Brownie Magician|fire|Draco
+Brownie Magician|wind|Aquila
+Brownie Magician|light|Gemini
+Brownie Magician|dark|Korona
+
+Kobold Bomber|water|Malaka
+Kobold Bomber|fire|Zibrolta
+Kobold Bomber|wind|Taurus
+Kobold Bomber|light|Dover
+Kobold Bomber|dark|Bering
+
+Taoist|water|Gildong
+Taoist|fire|Gunpyeong
+Taoist|wind|Woochi
+Taoist|light|Hwadam
+Taoist|dark|Woonhak
+
+Barbaric King|water|Aegir
+Barbaric King|fire|Surtr
+Barbaric King|wind|Hraesvelg
+Barbaric King|light|Mimirr
+Barbaric King|dark|Hrungnir
+
+Pirate Captain|water|Galleon
+Pirate Captain|fire|Carrack
+Pirate Captain|wind|Barque
+Pirate Captain|light|Brig
+Pirate Captain|dark|Frigate
+
+Mermaid|water|Tetra
+Mermaid|fire|Platy
+Mermaid|wind|Cichlid
+Mermaid|light|Molly
+Mermaid|dark|Betta
+
+Magic Knight|water|Lapis
+Magic Knight|fire|Astar
+Magic Knight|wind|Lupinus
+Magic Knight|light|Iris
+Magic Knight|dark|Lanett
+
+Assassin|water|Stella
+Assassin|fire|Lexy
+Assassin|wind|Tanya
+Assassin|light|Natalie
+Assassin|dark|Isabelle
+
+Neostone Fighter|water|Ryan
+Neostone Fighter|fire|Trevor
+Neostone Fighter|wind|Logan
+Neostone Fighter|light|Lucas
+Neostone Fighter|dark|Karl
+
+Neostone Agent|water|Emma
+Neostone Agent|fire|Lisa
+Neostone Agent|wind|Olivia
+Neostone Agent|light|Illianna
+Neostone Agent|dark|Sylvia
+
+Anubis|water|Avaris
+Anubis|fire|Khmun
+Anubis|wind|Iunu
+Anubis|light|Amarna
+Anubis|dark|Thebae
+
+Horus|water|Qebehsenuef
+Horus|fire|Duamutef
+Horus|wind|Imesety
+Horus|light|Wedjat
+Horus|dark|Amduat
+
+Jack-o'-lantern|water|Chilling
+Jack-o'-lantern|fire|Smokey
+Jack-o'-lantern|wind|Windy
+Jack-o'-lantern|light|Misty
+Jack-o'-lantern|dark|Dusky
+
+# === 5★ МОНСТРЫ ===
+Valkyrja|water|Camilla
+Valkyrja|fire|Vanessa
+Valkyrja|wind|Katarina
+Valkyrja|light|Akroma
+Valkyrja|dark|Trinity
+
+Dragon|water|Verad
+Dragon|fire|Zaiross
+Dragon|wind|Jamire
+Dragon|light|Zerath
+Dragon|dark|Grogen
+
+Phoenix|water|Sigmarus
+Phoenix|fire|Perna
+Phoenix|wind|Teshar
+Phoenix|light|Eludia
+Phoenix|dark|Jaara
+
+Chimera|water|Taor
+Chimera|fire|Rakan
+Chimera|wind|Lagmaron
+Chimera|light|Shan
+Chimera|dark|Zeratu
+
+Vampire|water|Liesel
+Vampire|fire|Verdehile
+Vampire|wind|Argen
+Vampire|light|Julianne
+Vampire|dark|Cadiz
+
+Oracle|water|Praha
+Oracle|fire|Juno
+Oracle|wind|Seara
+Oracle|light|Laima
+Oracle|dark|Giana
+
+Occult Girl|water|Anavel
+Occult Girl|fire|Rica
+Occult Girl|wind|Charlotte
+Occult Girl|light|Lora
+Occult Girl|dark|Nicki
+
+Dragon Knight|water|Chow
+Dragon Knight|fire|Laika
+Dragon Knight|wind|Leo
+Dragon Knight|light|Jager
+Dragon Knight|dark|Ragdoll
+
+Monkey King|water|Shi Hou
+Monkey King|fire|Mei Hou Wang
+Monkey King|wind|Xing Zhe
+Monkey King|light|Qitian Dasheng
+Monkey King|dark|Son Zhang Lao
+
+Archangel|water|Ariel
+Archangel|fire|Velajuel
+Archangel|wind|Eladriel
+Archangel|light|Artamiel
+Archangel|dark|Fermion
+
+Beast Monk|water|Chandra
+Beast Monk|fire|Kumar
+Beast Monk|wind|Ritesh
+Beast Monk|light|Shazam
+Beast Monk|dark|Rahul
+
+Hell Lady|water|Beth
+Hell Lady|fire|Raki
+Hell Lady|wind|Ethna
+Hell Lady|light|Asima
+Hell Lady|dark|Craka
+
+Sky Dancer|water|Mihyang
+Sky Dancer|fire|Hwahee
+Sky Dancer|wind|Chasun
+Sky Dancer|light|Yeonhong
+Sky Dancer|dark|Wolyung
+
+Pioneer|water|Woosa
+Pioneer|fire|Chiwu
+Pioneer|wind|Pungbaek
+Pioneer|light|Nigong
+Pioneer|dark|Woonsa
+
+Polar Queen|water|Alicia
+Polar Queen|fire|Brandia
+Polar Queen|wind|Tiana
+Polar Queen|light|Elenoa
+Polar Queen|dark|Lydia
+
+Ifrit|water|Theomars
+Ifrit|fire|Tesarion
+Ifrit|wind|Akhamamir
+Ifrit|light|Elsharion
+Ifrit|dark|Veromos
+
+Sea Emperor|water|Poseidon
+Sea Emperor|fire|Okeanos
+Sea Emperor|wind|Triton
+Sea Emperor|light|Pontos
+Sea Emperor|dark|Manannan
+
+Desert Queen|water|Bastet
+Desert Queen|fire|Sekhmet
+Desert Queen|wind|Hathor
+Desert Queen|light|Isis
+Desert Queen|dark|Nephthys
+
+Fairy King|water|Psamathe
+Fairy King|fire|Daphnis
+Fairy King|wind|Ganymede
+Fairy King|light|Oberon
+Fairy King|dark|Nyx
+
+Panda Warrior|water|Mo Long
+Panda Warrior|fire|Xiong Fei
+Panda Warrior|wind|Feng Yan
+Panda Warrior|light|Tian Lang
+Panda Warrior|dark|Mi Ying
+
+Unicorn|water|Amelia
+Unicorn|fire|Helena
+Unicorn|wind|Diana
+Unicorn|light|Eleanor
+Unicorn|dark|Alexandra
+
+Paladin|water|Josephine
+Paladin|fire|Ophilia
+Paladin|wind|Louise
+Paladin|light|Jeanne
+Paladin|dark|Leona
+
+Druid|water|Abellio
+Druid|fire|Bellenus
+Druid|wind|Taranys
+Druid|light|Valantis
+Druid|dark|Pater
+
+Lightning Emperor|water|Bolverk
+Lightning Emperor|fire|Baleygr
+Lightning Emperor|wind|Odin
+Lightning Emperor|light|Geldnir
+Lightning Emperor|dark|Herteit
+
+Harp Magician|water|Sonnet
+Harp Magician|fire|Harmonia
+Harp Magician|wind|Triana
+Harp Magician|light|Celia
+Harp Magician|dark|Vivachel
+
+Cannon Girl|water|Abigail
+Cannon Girl|fire|Scarlett
+Cannon Girl|wind|Christina
+Cannon Girl|light|Eleanor
+Cannon Girl|dark|Bella
+
+Demon|water|Belial
+Demon|fire|Bael
+Demon|wind|Mephisto
+Demon|light|Lucifer
+Demon|dark|Beelzebub
+
+Beast Rider|water|Barbara
+Beast Rider|fire|Masha
+Beast Rider|wind|Savannah
+Beast Rider|light|Narsha
+Beast Rider|dark|Xiana
+
+Art Master|water|Haegang
+Art Master|fire|Jeogun
+Art Master|wind|Cheongpung
+Art Master|light|Hanwul
+Art Master|dark|Inosuke
+
+Striker|water|Moore
+Striker|fire|Dominic
+Striker|wind|Oliver
+Striker|light|Max
+Striker|dark|Shun
+
+Slayer|water|Kaki
+Slayer|fire|Karnal
+Slayer|wind|Onyx
+Slayer|light|Cichlid
+Slayer|dark|Verad
+
+Onmyouji|water|Shizuka
+Onmyouji|fire|Ryuda
+Onmyouji|wind|Kinki
+Onmyouji|light|Seimei
+Onmyouji|dark|Amane
+
+Mage|water|Nana
+Mage|fire|Coco
+Mage|wind|Manon
+Mage|light|Mona
+Mage|dark|Nora
+
+Sky Surfer|water|Miles
+Sky Surfer|fire|John
+Sky Surfer|wind|Oliver
+Sky Surfer|light|Ellena
+Sky Surfer|dark|Sia
+
+Totemist|water|Qinglong
+Totemist|fire|Hyeonmu
+Totemist|wind|Riley
+Totemist|light|Baekho
+Totemist|dark|Jujak
+
+Weapon Master|water|Sagar
+Weapon Master|fire|Carlos
+Weapon Master|wind|Dominic
+Weapon Master|light|Lucas
+Weapon Master|dark|Karl
+
+Shadow Caster|water|Minato
+Shadow Caster|fire|Ren
+Shadow Caster|wind|Tenma
+Shadow Caster|light|Kuro
+Shadow Caster|dark|Haruki
+
+Battle Angel|water|Amber
+Battle Angel|fire|Suparna
+Battle Angel|wind|Sonia
+Battle Angel|light|Aurora
+Battle Angel|dark|Nyx
+
+Blade Dancer|water|Katarina
+Blade Dancer|fire|Camilla
+Blade Dancer|wind|Vanessa
+Blade Dancer|light|Trinity
+Blade Dancer|dark|Akroma
+
+Devil Maiden|water|Beelzebub
+Devil Maiden|fire|Lethe
+Devil Maiden|wind|Belial
+Devil Maiden|light|Mephisto
+Devil Maiden|dark|Lucifer
+
+Hypnomeow|water|Stella
+Hypnomeow|fire|Luna
+Hypnomeow|wind|Olivia
+Hypnomeow|light|Sylvia
+Hypnomeow|dark|Isabel
+
+ROBO|water|Musket
+ROBO|fire|Carbine
+ROBO|wind|Cannon
+ROBO|light|Rifle
+ROBO|dark|Pistol
+
+Daimon|water|Joker
+Daimon|fire|Yato
+Daimon|wind|Devil
+Daimon|light|Shinigami
+Daimon|dark|Oni
+
+Desert Warrior|water|Golem
+Desert Warrior|fire|Atziluth
+Desert Warrior|wind|Phoenix
+Desert Warrior|light|Serpent
+Desert Warrior|dark|Dragon
+
+Gladiatrix|water|Valkyrie
+Gladiatrix|fire|Amazon
+Gladiatrix|wind|Pirate
+Gladiatrix|light|Ninja
+Gladiatrix|dark|Samurai
+
+Mercenary Queen|water|Aria
+Mercenary Queen|fire|Elena
+Mercenary Queen|wind|Selena
+Mercenary Queen|light|Luna
+Mercenary Queen|dark|Stella
+
+Steel Commander|water|Steel
+Steel Commander|fire|Iron
+Steel Commander|wind|Bronze
+Steel Commander|light|Silver
+Steel Commander|dark|Gold
+
+# === КОЛЛАБОРАЦИИ ===
+Fairy Queen|light|Fran
+Vampire Lord|dark|Eirgar
+GingerBrave|wind|GingerBrave
+Lollipop Warrior|wind|Thomas
+Heihachi Mishima|fire|Heihachi Mishima
+Frodo|water|Frodo
+Dual Blade|light|Frederic
+Altaïr|light|Altaïr
+KEN|fire|KEN
+Shadow Claw|fire|Bernadotte
+Ryomen Sukuna|dark|Ryomen Sukuna
+Black Tortoise Champion|wind|Black Tortoise Champion
+Gyomei Himejima|wind|Gyomei Himejima
+Exorcist Association Arbiter|dark|Hayato
+Magical Archer Light|light|Fami
