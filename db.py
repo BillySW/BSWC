@@ -98,17 +98,30 @@ def get_element_status(mid, element):
     return {}
 
 def save_element_data(mid, element, data):
+    """Сохранить данные карточки, не затирая поля, которые не переданы."""
+    existing = get_element_status(mid, element)
+    merged = {**existing, **data}
+
     conn = sqlite3.connect(DB)
     c = conn.cursor()
-    c.execute("INSERT OR REPLACE INTO element_data(monster_id, element, set1, set2, set3, slot2, slot4, slot6, slot2_rune, slot4_rune, slot6_rune, rune1, rune2, rune3, stars, awakening, skills, artifacts, star5, star6) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
-        (mid, element,
-         data.get("set1",""), data.get("set2",""), data.get("set3",""),
-         data.get("slot2",""), data.get("slot4",""), data.get("slot6",""),
-         data.get("slot2_rune",""), data.get("slot4_rune",""), data.get("slot6_rune",""),
-         data.get("rune1",""), data.get("rune2",""), data.get("rune3",""),
-         data.get("stars",""), data.get("awakening",""), data.get("skills",""),
-         data.get("artifacts",""),
-         1 if data.get("star5") else 0, 1 if data.get("star6") else 0))
+    c.execute(
+        """INSERT OR REPLACE INTO element_data(
+            monster_id, element, set1, set2, set3,
+            slot2, slot4, slot6, slot2_rune, slot4_rune, slot6_rune,
+            rune1, rune2, rune3, stars, awakening, skills, artifacts,
+            custom_name, star5, star6
+        ) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+        (
+            mid, element,
+            merged.get("set1", ""), merged.get("set2", ""), merged.get("set3", ""),
+            merged.get("slot2", ""), merged.get("slot4", ""), merged.get("slot6", ""),
+            merged.get("slot2_rune", ""), merged.get("slot4_rune", ""), merged.get("slot6_rune", ""),
+            merged.get("rune1", ""), merged.get("rune2", ""), merged.get("rune3", ""),
+            merged.get("stars", ""), merged.get("awakening", ""), merged.get("skills", ""),
+            merged.get("artifacts", ""), merged.get("custom_name", ""),
+            1 if merged.get("star5") else 0, 1 if merged.get("star6") else 0,
+        ),
+    )
     conn.commit()
     conn.close()
 

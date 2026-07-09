@@ -3,9 +3,9 @@ import sys
 import os
 from PySide6.QtWidgets import (
     QApplication, QMainWindow, QTabWidget, QWidget,
-    QVBoxLayout, QHBoxLayout, QLineEdit, QPushButton
+    QVBoxLayout, QHBoxLayout, QLineEdit, QPushButton, QComboBox
 )
-from PySide6.QtCore import Qt
+from PySide6.QtCore import Qt, QEvent
 from tirlist import TirList
 from foodlist import FoodList
 from options import Options
@@ -31,7 +31,7 @@ class MainWindow(QMainWindow):
         search_layout.setContentsMargins(10, 5, 10, 5)
 
         self.search_input = QLineEdit()
-        self.search_input.setPlaceholderText("🔍 Search monsters... (Ctrl+F)")
+        self.search_input.setPlaceholderText("🔍 Search monsters... (Ctrl+F, results in Search tab)")
         self.search_input.setStyleSheet("""
             QLineEdit {
                 background: #3d3d3d;
@@ -108,51 +108,60 @@ class MainWindow(QMainWindow):
 
         main_layout.addWidget(self.tabs)
 
-        # Перехват нажатий клавиш
-        self.tabs.keyPressEvent = self.key_press
+        self.tabs.currentChanged.connect(self.on_tab_changed)
 
-    def key_press(self, e):
-        """Обработка нажатий клавиш"""
+        QApplication.instance().installEventFilter(self)
+
+    def eventFilter(self, obj, event):
+        if event.type() == QEvent.KeyPress and self._arrow_keys_enabled():
+            key = event.key()
+            if key == Qt.Key_Left:
+                i = self.tabs.currentIndex()
+                self.tabs.setCurrentIndex((i - 1) % self.tabs.count())
+                return True
+            if key == Qt.Key_Right:
+                i = self.tabs.currentIndex()
+                self.tabs.setCurrentIndex((i + 1) % self.tabs.count())
+                return True
+            if key == Qt.Key_Up:
+                self._scroll_current_tab(-50)
+                return True
+            if key == Qt.Key_Down:
+                self._scroll_current_tab(50)
+                return True
+            if key == Qt.Key_F and event.modifiers() & Qt.ControlModifier:
+                self.search_input.setFocus()
+                self.search_input.selectAll()
+                return True
+        return super().eventFilter(obj, event)
+
+    def _arrow_keys_enabled(self):
+        """Не перехватывать стрелки, когда пользователь редактирует текст или комбобокс."""
+        focus = QApplication.focusWidget()
+        if focus is None:
+            return True
+        if focus is self.search_input:
+            return False
+        if isinstance(focus, (QLineEdit, QComboBox)):
+            return False
+        return True
+
+    def _scroll_current_tab(self, delta):
         current = self.tabs.currentWidget()
-
-        # Стрелки для навигации по вкладкам
-        if e.key() == Qt.Key_Left:
-            i = self.tabs.currentIndex()
-            self.tabs.setCurrentIndex((i - 1) % self.tabs.count())
-        elif e.key() == Qt.Key_Right:
-            i = self.tabs.currentIndex()
-            self.tabs.setCurrentIndex((i + 1) % self.tabs.count())
-
-        # Стрелки для скролла
-        elif e.key() == Qt.Key_Up:
-            if hasattr(current, 'scroll') and current.scroll:
-                bar = current.scroll.verticalScrollBar()
-                bar.setValue(bar.value() - 50)
-        elif e.key() == Qt.Key_Down:
-            if hasattr(current, 'scroll') and current.scroll:
-                bar = current.scroll.verticalScrollBar()
-                bar.setValue(bar.value() + 50)
-
-        # Цифры для быстрого переключения (1-9)
-        elif e.key() >= Qt.Key_1 and e.key() <= Qt.Key_9:
-            idx = e.key() - Qt.Key_1
-            if idx < self.tabs.count():
-                self.tabs.setCurrentIndex(idx)
-
-        # Ctrl+F для поиска
-        elif e.key() == Qt.Key_F and e.modifiers() & Qt.ControlModifier:
-            self.tabs.setCurrentIndex(7)  # Вкладка поиска
-            self.search_tab.search_input.setFocus()
-            self.search_tab.search_input.selectAll()
-
-        else:
-            QTabWidget.keyPressEvent(self.tabs, e)
+        if hasattr(current, "scroll") and current.scroll:
+            bar = current.scroll.verticalScrollBar()
+            bar.setValue(bar.value() + delta)
 
     def on_search(self, text):
-        """Обработка поиска из главной строки"""
+        """Глобальный поиск: одна строка ввода, результаты на вкладке Search."""
+        self.search_tab.set_query(text)
         if text.strip():
-            self.tabs.setCurrentIndex(7)  # Переключаемся на поиск
-            self.search_tab.search_input.setText(text)
+            self.tabs.setCurrentWidget(self.search_tab)
+
+    def on_tab_changed(self, _index):
+        """При открытии Search — показать актуальные результаты по текущему запросу."""
+        if self.tabs.currentWidget() is self.search_tab:
+            self.search_tab.set_query(self.search_input.text())
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

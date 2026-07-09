@@ -196,7 +196,8 @@ class ElementCard(QFrame):
         row3.addStretch()
         main_lay.addLayout(row3)
 
-        # Подключаем сигналы ПОСЛЕ создания всех комбобоксов
+        # Подключаем сигналы ПОСЛЕ загрузки значений из БД
+        self._saving = False
         for cb in [self.slot2_rune, self.slot4_rune, self.slot6_rune,
                    self.slot2_stat, self.slot4_stat, self.slot6_stat,
                    self.rune1_cb, self.rune2_cb, self.rune3_cb]:
@@ -255,19 +256,28 @@ class ElementCard(QFrame):
         save_element_data(self.mid, self.element, data)
 
     def save_data(self):
-        data = {
-            "custom_name": self.name_label.text(),
-            "slot2_rune": self.slot2_rune.currentText(),
-            "slot4_rune": self.slot4_rune.currentText(),
-            "slot6_rune": self.slot6_rune.currentText(),
-            "slot2": self.slot2_stat.currentText(),
-            "slot4": self.slot4_stat.currentText(),
-            "slot6": self.slot6_stat.currentText(),
-            "rune1": self.rune1_cb.currentText(),
-            "rune2": self.rune2_cb.currentText(),
-            "rune3": self.rune3_cb.currentText(),
-        }
-        save_element_data(self.mid, self.element, data)
+        if self._saving:
+            return
+        self._saving = True
+        try:
+            data = get_element_status(self.mid, self.element)
+            data.update({
+                "custom_name": self.name_label.text(),
+                "slot2_rune": self.slot2_rune.currentText(),
+                "slot4_rune": self.slot4_rune.currentText(),
+                "slot6_rune": self.slot6_rune.currentText(),
+                "slot2": self.slot2_stat.currentText(),
+                "slot4": self.slot4_stat.currentText(),
+                "slot6": self.slot6_stat.currentText(),
+                "rune1": self.rune1_cb.currentText(),
+                "rune2": self.rune2_cb.currentText(),
+                "rune3": self.rune3_cb.currentText(),
+                "star5": self.star5.isChecked(),
+                "star6": self.star6.isChecked(),
+            })
+            save_element_data(self.mid, self.element, data)
+        finally:
+            self._saving = False
 
 
 class ElementTab(BaseList):
