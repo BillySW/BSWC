@@ -16,6 +16,7 @@ def init_db():
     c.execute("CREATE TABLE IF NOT EXISTS element_data(monster_id INTEGER, element TEXT, set1 TEXT DEFAULT '', set2 TEXT DEFAULT '', set3 TEXT DEFAULT '', slot2 TEXT DEFAULT '', slot4 TEXT DEFAULT '', slot6 TEXT DEFAULT '', slot2_rune TEXT DEFAULT '', slot4_rune TEXT DEFAULT '', slot6_rune TEXT DEFAULT '', rune1 TEXT DEFAULT '', rune2 TEXT DEFAULT '', rune3 TEXT DEFAULT '', stars TEXT DEFAULT '', awakening TEXT DEFAULT '', skills TEXT DEFAULT '', artifacts TEXT DEFAULT '', custom_name TEXT DEFAULT '', star5 INTEGER DEFAULT 0, star6 INTEGER DEFAULT 0, PRIMARY KEY(monster_id, element))")
     conn.commit()
     conn.close()
+    init_hex_db()
 
 def get_monsters():
     conn = sqlite3.connect(DB)
@@ -183,6 +184,60 @@ def get_all_monsters():
     conn = sqlite3.connect(DB); c = conn.cursor()
     c.execute("SELECT id, name_en, stars_base FROM monsters ORDER BY name_en")
     r = c.fetchall(); conn.close(); return r
+
+# ============ HEX / FUSION ============
+
+def init_hex_db():
+    """Инициализация таблицы для HEX-состояний"""
+    conn = sqlite3.connect(DB)
+    c = conn.cursor()
+    c.execute("""
+        CREATE TABLE IF NOT EXISTS hex_states (
+            recipe_name TEXT NOT NULL,
+            monster_name TEXT NOT NULL,
+            element TEXT NOT NULL,
+            state INTEGER DEFAULT 0,
+            PRIMARY KEY (recipe_name, monster_name, element)
+        )
+    """)
+    conn.commit()
+    conn.close()
+
+def get_hex_state(recipe_name, monster_name, element):
+    """Получить состояние картинки (0, 1 или 2)"""
+    conn = sqlite3.connect(DB)
+    c = conn.cursor()
+    c.execute(
+        "SELECT state FROM hex_states WHERE recipe_name=? AND monster_name=? AND element=?",
+        (recipe_name, monster_name, element)
+    )
+    r = c.fetchone()
+    conn.close()
+    return r[0] if r else 0
+
+def save_hex_state(recipe_name, monster_name, element, state):
+    """Сохранить состояние картинки"""
+    conn = sqlite3.connect(DB)
+    c = conn.cursor()
+    c.execute(
+        """INSERT OR REPLACE INTO hex_states (recipe_name, monster_name, element, state)
+           VALUES (?, ?, ?, ?)""",
+        (recipe_name, monster_name, element, state)
+    )
+    conn.commit()
+    conn.close()
+
+def get_all_hex_states():
+    """Получить все HEX-состояния (для отладки/экспорта)"""
+    conn = sqlite3.connect(DB)
+    c = conn.cursor()
+    c.execute("SELECT recipe_name, monster_name, element, state FROM hex_states")
+    r = c.fetchall()
+    conn.close()
+    return r
+
+# Вызываем инициализацию при импорте
+init_hex_db()
 
 if not os.path.exists(DB):
     init_db()

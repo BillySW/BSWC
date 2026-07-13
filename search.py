@@ -1,5 +1,5 @@
 # search.py
-from PySide6.QtWidgets import QWidget, QVBoxLayout, QLabel, QScrollArea, QFrame
+from PySide6.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QLabel, QScrollArea, QFrame
 from PySide6.QtCore import Qt, QTimer
 from db import get_all_monsters, get_status
 from squares import ElementSquare

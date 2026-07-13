@@ -11,6 +11,7 @@ from foodlist import FoodList
 from options import Options
 from element_tab import ElementTab
 from search import SearchTab
+from hex_tab import HexTab
 from db import sync_txt, init_db
 
 class MainWindow(QMainWindow):
@@ -87,6 +88,7 @@ class MainWindow(QMainWindow):
         self.tab_light = ElementTab("light")
         self.tab_dark = ElementTab("dark")
         self.search_tab = SearchTab()
+        self.hex_tab = HexTab()
         self.opt = Options(self)
 
         # Список вкладок
@@ -99,6 +101,7 @@ class MainWindow(QMainWindow):
             (self.tab_light, "✨ Light"),
             (self.tab_dark, "🌑 Dark"),
             (self.search_tab, "🔍 Search"),
+            (self.hex_tab, "🔮 HEX"),
             (self.opt, "⚙️ Options"),
         ]
 
@@ -229,6 +232,7 @@ if __name__ == "__main__":
     w.tab_wind.refresh()
     w.tab_light.refresh()
     w.tab_dark.refresh()
+    w.hex_tab.refresh()
 
     w.show()
     sys.exit(app.exec())

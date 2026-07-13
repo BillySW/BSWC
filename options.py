@@ -47,6 +47,7 @@ class Options(QWidget):
             self.parent.tab_wind.refresh()
             self.parent.tab_light.refresh()
             self.parent.tab_dark.refresh()
+            self.parent.hex_tab.refresh()
             self.parent.search_tab.reload_monsters()
         else:
             self.status.setText("❌ mobs.txt not found")
@@ -70,6 +71,7 @@ class Options(QWidget):
             self.parent.tab_wind.refresh()
             self.parent.tab_light.refresh()
             self.parent.tab_dark.refresh()
+            self.parent.hex_tab.refresh()
             self.parent.search_tab.reload_monsters()
         else:
             self.status.setText("❌ Import failed")
