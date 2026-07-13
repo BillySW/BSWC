@@ -230,6 +230,12 @@ Charger Shark|wind|Zephicus
 Charger Shark|light|Rumicus
 Charger Shark|dark|Calicus
 
+Chakram Dancer|water|Talia
+Chakram Dancer|fire|Shaina
+Chakram Dancer|wind|Melissa
+Chakram Dancer|light|Deva
+Chakram Dancer|dark|Belita
+
 Martial Artist|water|Luan
 Martial Artist|fire|Sin
 Martial Artist|wind|Lo
@@ -272,6 +278,18 @@ Undine|fire|Atenai
 Undine|wind|Delphoi
 Undine|light|Icasha
 Undine|dark|Tilasha
+
+Giant Warrior|water|Bagir
+Giant Warrior|fire|Vidurr
+Giant Warrior|wind|Skogul
+Giant Warrior|light|Einheri
+Giant Warrior|dark|Trasar
+
+Boomerang Warrior|water|Sabrina
+Boomerang Warrior|fire|Maruna
+Boomerang Warrior|wind|Zenobia
+Boomerang Warrior|light|Bailey
+Boomerang Warrior|dark|Martina
 
 Sylph|water|Tyron
 Sylph|fire|Baretta
@@ -375,11 +393,23 @@ Taoist|wind|Woochi
 Taoist|light|Hwadam
 Taoist|dark|Woonhak
 
+Cyborg|water|Lorenza
+Cyborg|fire|Carmella
+Cyborg|wind|Eliza
+Cyborg|light|Lucia
+Cyborg|dark|Roberta
+
 Barbaric King|water|Aegir
 Barbaric King|fire|Surtr
 Barbaric King|wind|Hraesvelg
 Barbaric King|light|Mimirr
 Barbaric King|dark|Hrungnir
+
+Rune Blacksmith|water|Susan
+Rune Blacksmith|fire|Miriam
+Rune Blacksmith|wind|Celine
+Rune Blacksmith|light|Madeleine
+Rune Blacksmith|dark|Deborah
 
 Pirate Captain|water|Galleon
 Pirate Captain|fire|Carrack
@@ -472,11 +502,35 @@ Oracle|wind|Seara
 Oracle|light|Laima
 Oracle|dark|Giana
 
+Gargoyle|water|Tanzaite
+Gargoyle|fire|Kunite
+Gargoyle|wind|Malite
+Gargoyle|light|Phenaka
+Gargoyle|dark|Onyx
+
+Choco Knight|water|Ganache
+Choco Knight|fire|Pavé
+Choco Knight|wind|Praline
+Choco Knight|light|Fudge
+Choco Knight|dark|Truffle
+
 Occult Girl|water|Anavel
 Occult Girl|fire|Rica
 Occult Girl|wind|Charlotte
 Occult Girl|light|Lora
 Occult Girl|dark|Nicki
+
+Dryad|water|Herne
+Dryad|fire|Nisha
+Dryad|wind|Mellia
+Dryad|light|Felleria
+Dryad|dark|Hyanes
+
+Dokkaebi Princess and Sapsaree|water|Minji and Sapsaree
+Dokkaebi Princess and Sapsaree|fire|Yeji and Sapsaree
+Dokkaebi Princess and Sapsaree|wind|Yuna and Sapsaree
+Dokkaebi Princess and Sapsaree|light|Eunbee and Sapsaree
+Dokkaebi Princess and Sapsaree|dark|Damee and Sapsaree
 
 Dragon Knight|water|Chow
 Dragon Knight|fire|Laika
@@ -682,11 +736,17 @@ Hypnomeow|wind|Olivia
 Hypnomeow|light|Sylvia
 Hypnomeow|dark|Isabel
 
-ROBO|water|Musket
-ROBO|fire|Carbine
-ROBO|wind|Cannon
-ROBO|light|Rifle
-ROBO|dark|Pistol
+ROBO|water|ROBO-R40
+ROBO|fire|ROBO-P27
+ROBO|wind|ROBO-G92
+ROBO|light|ROBO-E65
+ROBO|dark|ROBO-F29
+
+Vermilion Bird Dancer|water|Vermilion Bird Dancer
+Vermilion Bird Dancer|fire|Vermilion Bird Dancer
+Vermilion Bird Dancer|wind|Vermilion Bird Dancer
+Vermilion Bird Dancer|light|Vermilion Bird Dancer
+Vermilion Bird Dancer|dark|Vermilion Bird Dancer
 
 Daimon|water|Joker
 Daimon|fire|Yato
@@ -706,6 +766,18 @@ Gladiatrix|wind|Pirate
 Gladiatrix|light|Ninja
 Gladiatrix|dark|Samurai
 
+Onimusha|water|Suiki
+Onimusha|fire|Kaki
+Onimusha|wind|Fuuki
+Onimusha|light|Kinki
+Onimusha|dark|Ongyouki
+
+Poison Master|water|Kyle
+Poison Master|fire|Todd
+Poison Master|wind|Jarrett
+Poison Master|light|Hekerson
+Poison Master|dark|Cayde
+
 Mercenary Queen|water|Aria
 Mercenary Queen|fire|Elena
 Mercenary Queen|wind|Selena
@@ -717,6 +789,42 @@ Steel Commander|fire|Iron
 Steel Commander|wind|Bronze
 Steel Commander|light|Silver
 Steel Commander|dark|Gold
+
+Jack-o’-lantern|water|Chilling
+Jack-o’-lantern|fire|Smokey
+Jack-o’-lantern|wind|Windy
+Jack-o’-lantern|light|Misty
+Jack-o’-lantern|dark|Dusky
+
+Exorcist Association Conjurer|water|Hiroyuki
+Exorcist Association Conjurer|fire|Tetsuya
+Exorcist Association Conjurer|wind|Kuroshu
+Exorcist Association Conjurer|light|Ginjo
+Exorcist Association Conjurer|dark|Doburoku
+
+Tomb Warden|water|Mork
+Tomb Warden|fire|Rex
+Tomb Warden|wind|Gronn
+Tomb Warden|light|Ramon
+Tomb Warden|dark|Volg
+
+Magic Order Swordsinger|water|Rigna
+Magic Order Swordsinger|fire|Reyka
+Magic Order Swordsinger|wind|Tirsa
+Magic Order Swordsinger|light|Brigitta
+Magic Order Swordsinger|dark|Fiona
+
+String Master|water|Songseol
+String Master|fire|Hongyeon
+String Master|wind|Yeonhwa
+String Master|light|Dongbaek
+String Master|dark|Mirinae
+
+|water|
+|fire|
+|wind|
+|light|
+|dark|
 
 # === КОЛЛАБОРАЦИИ ===
 Fairy Queen|light|Fran

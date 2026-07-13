@@ -54,6 +54,8 @@ class RuneComboBox(QComboBox):
                 self.addItem(rune)
 
 
+# element_tab.py - ПОЛНЫЙ КЛАСС ElementCard
+
 class ElementCard(QFrame):
     def __init__(self, mon, element):
         super().__init__()
@@ -61,6 +63,9 @@ class ElementCard(QFrame):
         self.name_en = mon[1]
         self.element = element
         data = get_element_status(self.mid, element)
+
+        # Флаг блокировки (сохраняется в БД как 'locked' в custom_name или отдельно)
+        self._locked = data.get("locked", False)
 
         self.setStyleSheet("""
             QFrame { background: #2a2a2a; border-radius: 8px; border: 1px solid #3d3d3d; }
@@ -71,16 +76,39 @@ class ElementCard(QFrame):
         main_lay.setSpacing(2)
         main_lay.setContentsMargins(8, 5, 8, 5)
 
-        # === Строка 1: Имя + Звезды ===
+        # === Строка 1: Имя + Кнопка блокировки + Звезды ===
         row1 = QHBoxLayout()
         row1.setSpacing(2)
+
+        # Получаем пробуждённое имя
         awakened_name = get_awakened_name(self.name_en, self.element)
-        name_text = data.get("custom_name", awakened_name)
+
+        # Если есть кастомное имя и оно не пустое — используем его
+        custom_name = data.get("custom_name", "")
+        if custom_name and custom_name.strip():
+            name_text = custom_name
+        else:
+            name_text = awakened_name
+
         self.name_label = QLabel(name_text)
         self.name_label.setStyleSheet("font-size:13px;font-weight:bold;color:#fff;background:transparent;")
         self.name_label.setFixedHeight(20)
+
+        # Назначаем обработчик двойного клика
+        self.name_label.mouseDoubleClickEvent = self.reset_name
+
         row1.addWidget(self.name_label)
         row1.addStretch()
+
+        # Кнопка блокировки
+        self.lock_btn = QPushButton()
+        self.lock_btn.setFixedSize(22, 22)
+        self.lock_btn.setCheckable(True)
+        self.lock_btn.setChecked(self._locked)
+        self.lock_btn.clicked.connect(self.toggle_lock)
+        self.update_lock_button()
+        row1.addWidget(self.lock_btn)
+
         for _ in range(4):
             lbl = QLabel("★")
             lbl.setStyleSheet("color:#a855f7;font-size:14px;background:transparent;")
@@ -203,6 +231,100 @@ class ElementCard(QFrame):
                    self.rune1_cb, self.rune2_cb, self.rune3_cb]:
             cb.currentTextChanged.connect(self.save_data)
 
+        # Применяем блокировку, если нужно
+        if self._locked:
+            self.set_locked_state(True)
+
+    def update_lock_button(self):
+        """Обновить внешний вид кнопки блокировки"""
+        if self._locked:
+            self.lock_btn.setText("🔒")
+            self.lock_btn.setStyleSheet("""
+                QPushButton {
+                    background: #c0392b;
+                    color: #fff;
+                    font-size: 12px;
+                    border: 1px solid #e74c3c;
+                    border-radius: 3px;
+                    padding: 0px;
+                }
+                QPushButton:hover {
+                    background: #e74c3c;
+                }
+            """)
+            self.lock_btn.setToolTip("🔒 Карточка заблокирована. Нажмите чтобы разблокировать.")
+        else:
+            self.lock_btn.setText("🔓")
+            self.lock_btn.setStyleSheet("""
+                QPushButton {
+                    background: #555;
+                    color: #fff;
+                    font-size: 12px;
+                    border: 1px solid #666;
+                    border-radius: 3px;
+                    padding: 0px;
+                }
+                QPushButton:hover {
+                    background: #666;
+                }
+            """)
+            self.lock_btn.setToolTip("🔓 Карточка разблокирована. Нажмите чтобы заблокировать.")
+
+    def toggle_lock(self):
+        """Переключить блокировку карточки"""
+        self._locked = self.lock_btn.isChecked()
+        self.set_locked_state(self._locked)
+        self.save_lock_state()
+
+    def set_locked_state(self, locked):
+        """Применить состояние блокировки ко всем элементам"""
+        # Блокируем все комбобоксы
+        for widget in [self.slot2_rune, self.slot4_rune, self.slot6_rune,
+                       self.slot2_stat, self.slot4_stat, self.slot6_stat,
+                       self.rune1_cb, self.rune2_cb, self.rune3_cb]:
+            widget.setEnabled(not locked)
+            if locked:
+                widget.setStyleSheet(widget.styleSheet().replace("background:#3d3d3d;", "background:#2a2a2a;"))
+            else:
+                widget.setStyleSheet(widget.styleSheet().replace("background:#2a2a2a;", "background:#3d3d3d;"))
+
+        # Блокируем кнопки статусов
+        for btn in [self.aw_btn, self.sk_btn, self.art_btn]:
+            btn.setEnabled(not locked)
+
+        # Блокируем звезды
+        self.star5.setEnabled(not locked)
+        self.star6.setEnabled(not locked)
+
+        # Меняем фон карточки
+        if locked:
+            self.setStyleSheet("""
+                QFrame {
+                    background: #2a2a2a;
+                    border-radius: 8px;
+                    border: 2px solid #c0392b;
+                }
+            """)
+        else:
+            self.setStyleSheet("""
+                QFrame {
+                    background: #2a2a2a;
+                    border-radius: 8px;
+                    border: 1px solid #3d3d3d;
+                }
+                QFrame:hover {
+                    border: 1px solid #4a7aca;
+                }
+            """)
+
+        self.update_lock_button()
+
+    def save_lock_state(self):
+        """Сохранить состояние блокировки в БД"""
+        data = get_element_status(self.mid, self.element)
+        data["locked"] = self._locked
+        save_element_data(self.mid, self.element, data)
+
     def on_star5_click(self):
         checked = self.star5.isChecked()
         self.star5.setChecked(checked)
@@ -255,14 +377,31 @@ class ElementCard(QFrame):
         self.update_art_btn(data["artifacts"])
         save_element_data(self.mid, self.element, data)
 
+    def reset_name(self, event):
+        """Сбросить кастомное имя до пробуждённого по двойному клику"""
+        awakened_name = get_awakened_name(self.name_en, self.element)
+        self.name_label.setText(awakened_name)
+        data = get_element_status(self.mid, self.element)
+        data["custom_name"] = ""
+        save_element_data(self.mid, self.element, data)
+
     def save_data(self):
         if self._saving:
             return
         self._saving = True
         try:
             data = get_element_status(self.mid, self.element)
+
+            # Сохраняем кастомное имя только если оно отличается от пробуждённого
+            awakened_name = get_awakened_name(self.name_en, self.element)
+            current_name = self.name_label.text()
+            if current_name != awakened_name:
+                custom_name = current_name
+            else:
+                custom_name = ""
+
             data.update({
-                "custom_name": self.name_label.text(),
+                "custom_name": custom_name,
                 "slot2_rune": self.slot2_rune.currentText(),
                 "slot4_rune": self.slot4_rune.currentText(),
                 "slot6_rune": self.slot6_rune.currentText(),
@@ -278,7 +417,6 @@ class ElementCard(QFrame):
             save_element_data(self.mid, self.element, data)
         finally:
             self._saving = False
-
 
 class ElementTab(BaseList):
     def __init__(self, element):

@@ -1,4 +1,4 @@
-# db.py - ПОЛНАЯ ВЕРСИЯ С ВСЕМИ ФУНКЦИЯМИ
+# db.py - ПОЛНАЯ ВЕРСИЯ С ВСЕМИ ФУНКЦИЯМИ (ДОБАВЛЕНО ПОЛЕ locked)
 import sqlite3
 import os
 import re
@@ -13,7 +13,17 @@ def init_db():
     c.execute("CREATE TABLE IF NOT EXISTS monsters(id INTEGER PRIMARY KEY AUTOINCREMENT, name_en TEXT UNIQUE, stars_base INTEGER DEFAULT 3, sort_order INTEGER DEFAULT 0, update_name TEXT DEFAULT '')")
     c.execute("CREATE TABLE IF NOT EXISTS monster_status(monster_id INTEGER PRIMARY KEY, water INTEGER DEFAULT 0, fire INTEGER DEFAULT 0, wind INTEGER DEFAULT 0, light INTEGER DEFAULT 0, dark INTEGER DEFAULT 0, water_locked INTEGER DEFAULT 0, fire_locked INTEGER DEFAULT 0, wind_locked INTEGER DEFAULT 0, light_locked INTEGER DEFAULT 0, dark_locked INTEGER DEFAULT 0)")
     c.execute("CREATE TABLE IF NOT EXISTS food_status(monster_id INTEGER PRIMARY KEY, water INTEGER DEFAULT 0, fire INTEGER DEFAULT 0, wind INTEGER DEFAULT 0, light INTEGER DEFAULT 0, dark INTEGER DEFAULT 0, water_locked INTEGER DEFAULT 0, fire_locked INTEGER DEFAULT 0, wind_locked INTEGER DEFAULT 0, light_locked INTEGER DEFAULT 0, dark_locked INTEGER DEFAULT 0)")
-    c.execute("CREATE TABLE IF NOT EXISTS element_data(monster_id INTEGER, element TEXT, set1 TEXT DEFAULT '', set2 TEXT DEFAULT '', set3 TEXT DEFAULT '', slot2 TEXT DEFAULT '', slot4 TEXT DEFAULT '', slot6 TEXT DEFAULT '', slot2_rune TEXT DEFAULT '', slot4_rune TEXT DEFAULT '', slot6_rune TEXT DEFAULT '', rune1 TEXT DEFAULT '', rune2 TEXT DEFAULT '', rune3 TEXT DEFAULT '', stars TEXT DEFAULT '', awakening TEXT DEFAULT '', skills TEXT DEFAULT '', artifacts TEXT DEFAULT '', custom_name TEXT DEFAULT '', star5 INTEGER DEFAULT 0, star6 INTEGER DEFAULT 0, PRIMARY KEY(monster_id, element))")
+    c.execute("""CREATE TABLE IF NOT EXISTS element_data(
+        monster_id INTEGER, element TEXT,
+        set1 TEXT DEFAULT '', set2 TEXT DEFAULT '', set3 TEXT DEFAULT '',
+        slot2 TEXT DEFAULT '', slot4 TEXT DEFAULT '', slot6 TEXT DEFAULT '',
+        slot2_rune TEXT DEFAULT '', slot4_rune TEXT DEFAULT '', slot6_rune TEXT DEFAULT '',
+        rune1 TEXT DEFAULT '', rune2 TEXT DEFAULT '', rune3 TEXT DEFAULT '',
+        stars TEXT DEFAULT '', awakening TEXT DEFAULT '', skills TEXT DEFAULT '',
+        artifacts TEXT DEFAULT '', custom_name TEXT DEFAULT '',
+        star5 INTEGER DEFAULT 0, star6 INTEGER DEFAULT 0,
+        locked INTEGER DEFAULT 0,
+        PRIMARY KEY(monster_id, element))""")
     conn.commit()
     conn.close()
     init_hex_db()
@@ -83,7 +93,7 @@ def get_element_monsters(element):
 def get_element_status(mid, element):
     conn = sqlite3.connect(DB)
     c = conn.cursor()
-    c.execute("SELECT set1, set2, set3, slot2, slot4, slot6, slot2_rune, slot4_rune, slot6_rune, rune1, rune2, rune3, stars, awakening, skills, artifacts, custom_name, star5, star6 FROM element_data WHERE monster_id=? AND element=?", (mid, element))
+    c.execute("SELECT set1, set2, set3, slot2, slot4, slot6, slot2_rune, slot4_rune, slot6_rune, rune1, rune2, rune3, stars, awakening, skills, artifacts, custom_name, star5, star6, locked FROM element_data WHERE monster_id=? AND element=?", (mid, element))
     r = c.fetchone()
     conn.close()
     if r:
@@ -94,7 +104,8 @@ def get_element_status(mid, element):
             "rune1": r[9] or "", "rune2": r[10] or "", "rune3": r[11] or "",
             "stars": r[12] or "", "awakening": r[13] or "", "skills": r[14] or "",
             "artifacts": r[15] or "", "custom_name": r[16] or "",
-            "star5": bool(r[17]), "star6": bool(r[18])
+            "star5": bool(r[17]), "star6": bool(r[18]),
+            "locked": bool(r[19]) if len(r) > 19 else False,
         }
     return {}
 
@@ -110,8 +121,8 @@ def save_element_data(mid, element, data):
             monster_id, element, set1, set2, set3,
             slot2, slot4, slot6, slot2_rune, slot4_rune, slot6_rune,
             rune1, rune2, rune3, stars, awakening, skills, artifacts,
-            custom_name, star5, star6
-        ) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+            custom_name, star5, star6, locked
+        ) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
         (
             mid, element,
             merged.get("set1", ""), merged.get("set2", ""), merged.get("set3", ""),
@@ -121,6 +132,7 @@ def save_element_data(mid, element, data):
             merged.get("stars", ""), merged.get("awakening", ""), merged.get("skills", ""),
             merged.get("artifacts", ""), merged.get("custom_name", ""),
             1 if merged.get("star5") else 0, 1 if merged.get("star6") else 0,
+            1 if merged.get("locked") else 0,
         ),
     )
     conn.commit()
@@ -152,7 +164,7 @@ def export_db():
     if not os.path.exists(DB): return None
     conn = sqlite3.connect(DB); conn.row_factory = sqlite3.Row; c = conn.cursor()
     data = {}
-    for table in ['monsters','monster_status','food_status','element_data']:
+    for table in ['monsters','monster_status','food_status','element_data','hex_states']:
         c.execute(f"SELECT * FROM {table}")
         data[table] = [dict(row) for row in c.fetchall()]
     conn.close()
@@ -169,9 +181,12 @@ def import_db():
         data = json.load(f)
     conn = sqlite3.connect(DB); c = conn.cursor()
     try:
-        c.execute("DELETE FROM element_data"); c.execute("DELETE FROM food_status")
-        c.execute("DELETE FROM monster_status"); c.execute("DELETE FROM monsters")
-        for table in ['monsters','monster_status','food_status','element_data']:
+        c.execute("DELETE FROM hex_states")
+        c.execute("DELETE FROM element_data")
+        c.execute("DELETE FROM food_status")
+        c.execute("DELETE FROM monster_status")
+        c.execute("DELETE FROM monsters")
+        for table in ['monsters','monster_status','food_status','element_data','hex_states']:
             if table in data and data[table]:
                 for row in data[table]:
                     p = ','.join(['?' for _ in row])
@@ -236,8 +251,22 @@ def get_all_hex_states():
     conn.close()
     return r
 
-# Вызываем инициализацию при импорте
+def migrate_element_data():
+    """Добавить столбец locked в element_data, если его нет"""
+    conn = sqlite3.connect(DB)
+    c = conn.cursor()
+    c.execute("PRAGMA table_info(element_data)")
+    columns = [col[1] for col in c.fetchall()]
+    if 'locked' not in columns:
+        print("Миграция: добавляем столбец 'locked' в element_data...")
+        c.execute("ALTER TABLE element_data ADD COLUMN locked INTEGER DEFAULT 0")
+        conn.commit()
+        print("Готово!")
+    conn.close()
+
+# Вызываем инициализацию и миграцию при импорте
 init_hex_db()
+migrate_element_data()
 
 if not os.path.exists(DB):
     init_db()
