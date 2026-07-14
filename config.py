@@ -5,7 +5,6 @@ import os
 TL_DIR = "TL"
 FL_DIR = "FL"
 HAVE_DIR = "have"
-HL_DIR = "HL"
 
 # Список рун для комбобоксов
 RUNES = [

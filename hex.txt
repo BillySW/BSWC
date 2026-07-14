@@ -1,0 +1,83 @@
+#hex.txt
+Phoenix (Water): 1 Nine-tailed Fox (Wind) 11 Harpy (Wind) 12 Amazon (Wind) 13 High Elemental (Fire) 14 Garuda (Water)
+2 Joker (Fire) 21 Werewolf (Fire) 22 Magical Archer (Fire) 23 Golem (Water) 24 Howl (Wind)
+3 Ninja (Water) 31 Inugami (Water) 32 Griffon (Water) 33 Bearman (Wind) 34 Yeti (Fire)
+4 Martial Cat (Water)
+
+Valkyrja (Wind): 1 Sylph (Fire) 11 Serpent (Fire) 12 Martial Cat (Fire) 13 Magical Archer (Water) 14 Salamander (Wind)
+2 Undine (Water) 21 Bearman (Water) 22 Grim Reaper (Water) 23 Inferno (Wind) 24 Imp (Fire)
+3 Nine-tailed Fox (Wind) 31 Harpy (Wind) 32 Amazon (Wind) 33 High Elemental (Fire) 34 Garuda (Water)
+4 Werewolf (Wind)
+
+Ifrit (Dark): 1 Vampire (Wind) 11 Minotauros (Wind) 12 Lizardman (Wind) 13 Living Armor (Fire) 14 Pixie (Water)
+2 Succubus (Fire) 21 Beast Hunter (Fire) 22 Salamander (Fire) 23 Harpy (Water) 24 Harpu (Wind)
+3 Undine (Water) 31 Bearman (Water) 32 Grim Reaper (Water) 33 Inferno (Wind) 34 Imp (Fire)
+4 Yeti (Dark)
+
+Panda Warrior (Fire): 1 Horus (Water) 11 Serpent (Water) 12 Mummy (Water) 13 Golem (Wind) 14 Hellhound (Fire)
+2 Kung Fu Girl (Wind) 21 Grim Reaper (Wind) 22 Charger Shark (Wind) 23 Inugami (Fire) 24 Imp (Water)
+3 Succubus (Fire) 31 Beast Hunter (Fire) 32 Salamander (Fire) 33 Harpy (Water) 34 Harpu (Wind)
+4 Viking (Fire)
+
+Paladin (Light): 1 Samurai (Water) 11 Martial Artist (Water) 12 Inferno (Water) 13 Magical Archer (Wind) 14 Elemental (Fire)
+2 Kung Fu Girl (Wind) 21 Grim Reaper (Wind) 22 Charger Shark (Wind) 23 Inugami (Fire) 24 Imp (Water)
+3 Harp Magician (Fire) 31 Mystic Witch (Fire) 32 Vagabond (Fire) 33 Warbear (Water) 34 Fairy (Wind)
+4 Cow Girl (Light)
+
+Lightning Emperor (Fire): 1 Vampire (Fire) 11 Imp Champion (Fire) 12 Golem (Fire) 13 Werewolf (Water) 14 Elemental (Wind)
+2 Samurai (Water) 21 Martial Artist (Water) 22 Inferno (Water) 23 Magical Archer (Wind) 24 Elemental (Fire)
+3 Magic Knight (Wind) 31 Bounty Hunter (Wind) 32 High Elemental (Wind) 33 Griffon (Fire) 34 Hellhound (Water)
+4 Bearman (Fire)
+
+Totemist (Wind): 1 Dryad (Wind) 11 Frankenstein (Wind) 12 Inugami (Wind) 13 Fairy (Fire) 14 Elemental (Water)
+2 Neostone Agent (Water) 21 Drunken Master (Water) 22 Lizardman (Water) 23 Serpent (Wind) 24 Garuda (Fire)
+3 Vampire (Fire) 31 Imp Champion (Fire) 32 Golem (Fire) 33 Werewolf (Water) 34 Elemental (Wind)
+4 Griffon (Wind)
+
+Dokkaebi Lord (Dark): 1 Dokkaebi Princess and Sapsaree (Fire) 11 Grim Reaper (Fire) 12 Inferno (Fire) 13 Imp Champion (Water) 14 Garuda (Wind)
+2 Onimusha (Water) 21 Giant Warrior (Water) 22 High Elemental (Water) 23 Mummy (Wind) 24 Howl (Fire)
+3 Dryad (Wind) 31 Frankenstein (Wind) 32 Inugami (Wind) 33 Fairy (Fire) 34 Elemental (Water)
+4 Viking (Dark)
+
+Arcane Weapon (Water): 1 Centaur Knight (Wind) 11 Living Armor (Wind) 12 Martial Cat (Wind) 13 Giant Warrior (Fire) 14 Minotauros (Water)
+2 Chakram Dancer (Fire) 21 Penguin Knight (Fire) 22 Harpy (Fire) 23 Howl (Water) 24 Imp Champion (Wind)
+3 Onimusha (Water) 31 Giant Warrior (Water) 32 High Elemental (Water) 33 Mummy (Wind) 34 Howl (Fire)
+4 Cow Girl (Water)
+
+Nine-tailed Fox (Wind): 1 Harpy (Wind) 2 Amazon (Wind) 3 High Elemental (Fire) 4 Garuda (Water)
+
+Joker (Fire): 1 Werewolf (Fire) 2 Magical Archer (Fire) 3 Golem (Water) 4 Howl (Wind)
+
+Ninja (Water): 1 Inugami (Water) 2 Griffon (Water) 3 Bearman (Wind) 4 Yeti (Fire)
+
+Sylph (Fire): 1 Serpent (Fire) 2 Martial Cat (Fire) 3 Magical Archer (Water) 4 Salamander (Wind)
+
+Undine (Water): 1 Bearman (Water) 2 Grim Reaper (Water) 3 Inferno (Wind) 4 Imp (Fire)
+
+Vampire (Wind): 1 Minotauros (Wind) 2 Lizardman (Wind) 3 Living Armor (Fire) 4 Pixie (Water)
+
+Succubus (Fire): 1 Beast Hunter (Fire) 2 Salamander (Fire) 3 Harpy (Water) 4 Harpu (Wind)
+
+Horus (Water): 1 Serpent (Water) 2 Mummy (Water) 3 Golem (Wind) 4 Hellhound (Fire)
+
+Kung Fu Girl (Wind): 1 Grim Reaper (Wind) 2 Charger Shark (Wind) 3 Inugami (Fire) 4 Imp (Water)
+
+Harp Magician (Fire): 1 Mystic Witch (Fire) 2 Vagabond (Fire) 3 Warbear (Water) 4 Fairy (Wind)
+
+Samurai (Water): 1 Martial Artist (Water) 2 Inferno (Water) 3 Magical Archer (Wind) 4 Elemental (Fire)
+
+Vampire (Fire): 1 Imp Champion (Fire) 2 Golem (Fire) 3 Werewolf (Water) 4 Elemental (Wind)
+
+Magic Knight (Wind): 1 Bounty Hunter (Wind) 2 High Elemental (Wind) 3 Griffon (Fire) 4 Hellhound (Water)
+
+Dryad (Wind): 1 Frankenstein (Wind) 2 Inugami (Wind) 3 Fairy (Fire) 4 Elemental (Water)
+
+Neostone Agent (Water): 1 Drunken Master (Water) 2 Lizardman (Water) 3 Serpent (Wind) 4 Garuda (Fire)
+
+Dokkaebi Princess and Sapsaree (Fire): 1 Grim Reaper (Fire) 2 Inferno (Fire) 3 Imp Champion (Water) 4 Garuda (Wind)
+
+Onimusha (Water): 1 Giant Warrior (Water) 2 High Elemental (Water) 3 Mummy (Wind) 4 Howl (Fire)
+
+Centaur Knight (Wind): 1 Living Armor (Wind) 2 Martial Cat (Wind) 3 Giant Warrior (Fire) 4 Minotauros (Water)
+
+Chakram Dancer (Fire): 1 Penguin Knight (Fire) 2 Harpy (Fire) 3 Howl (Water) 4 Imp Champion (Wind)
