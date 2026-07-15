@@ -754,17 +754,17 @@ Daimon|wind|Devil
 Daimon|light|Shinigami
 Daimon|dark|Oni
 
-Desert Warrior|water|Golem
-Desert Warrior|fire|Atziluth
-Desert Warrior|wind|Phoenix
-Desert Warrior|light|Serpent
-Desert Warrior|dark|Dragon
+Desert Warrior|water|Omar
+Desert Warrior|fire|Ashour
+Desert Warrior|wind|Shahat
+Desert Warrior|light|Ahmed
+Desert Warrior|dark|Salah
 
-Gladiatrix|water|Valkyrie
-Gladiatrix|fire|Amazon
-Gladiatrix|wind|Pirate
-Gladiatrix|light|Ninja
-Gladiatrix|dark|Samurai
+Gladiatrix|water|Kalantatze
+Gladiatrix|fire|Federica
+Gladiatrix|wind|Eleni
+Gladiatrix|light|Aurelia
+Gladiatrix|dark|Kiara
 
 Onimusha|water|Suiki
 Onimusha|fire|Kaki
@@ -819,6 +819,12 @@ String Master|fire|Hongyeon
 String Master|wind|Yeonhwa
 String Master|light|Dongbaek
 String Master|dark|Mirinae
+
+Dice Magician|water|Reno
+Dice Magician|fire|Ludo
+Dice Magician|wind|Morris
+Dice Magician|light|Tablo
+Dice Magician|dark|Monte
 
 |water|
 |fire|

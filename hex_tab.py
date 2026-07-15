@@ -338,7 +338,7 @@ class HexTab(BaseList):
                 row_layout.setSpacing(6)
                 row_layout.setAlignment(Qt.AlignLeft)
 
-                for j in range(2):
+                for j in range(3):
                     if i + j < len(recipes):
                         row_layout.addWidget(HexRecipeWidget(recipes[i + j], stars=5))
 
