@@ -1,6 +1,7 @@
 # main.py - ИСПРАВЛЕННАЯ ВЕРСИЯ
 import sys
 import os
+from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import (
     QApplication, QMainWindow, QTabWidget, QWidget,
     QVBoxLayout, QHBoxLayout, QLineEdit, QPushButton, QComboBox
@@ -18,6 +19,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("BSWC - Billy's Summoners War Collector")
+        self.setWindowIcon(QIcon("icon.ico"))
         self.setFixedSize(1024, 768)
 
         # Главный виджет
